@@ -2,17 +2,19 @@
 /*
   These are the styles to create an interface of a chat/bot
 */
+//
+
 
 .botui-app-container {
-  width: 100%; // mobile-first
-  height: 100%;
-  line-height: 1;
+  width:  100%;
+  height: 100vh;//縦方向も埋まるようにしてスマホの縦スクロールも問題ないようにする
+  margin: 0 auto;
 
-  @media (min-width: 400px) {
-    width: 400px;
-    height: 500px;
-    margin: 0 auto;
-  }
+  //@media (min-width: 400px) {
+  //  width:  100%;
+  //  height: 100vh;//縦方向も埋まるようにしてスマホの縦スクロールも問題ないようにする
+  //  margin: 0 auto;
+  //}
 }
 
 .botui-container {
@@ -73,11 +75,11 @@
 .profil > img {
   &.agent {
     content: url(http://decodemoji.com/img/logos/blue_moji_hat.svg);
-    border-radius: 50%;
   }
+  border-radius: 50%;
   width: 26px;
   height: 26px;
-  border: 2px solid #e8e8e8;
+  border: 0;
 }
 
 button.botui-actions-buttons-button {
@@ -89,7 +91,7 @@ button.botui-actions-buttons-button {
 }
 
 .botui-actions-text-submit {
-  @media (min-width: 400px) {
-    display: none;
-  }
+  //@media (min-width: 400px) {
+  //  display: none;
+  //}
 }
