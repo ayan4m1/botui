@@ -214,8 +214,8 @@
         root.Vue.directive('botui-scroll', {
             inserted: function (el) {
 
-                //riversun added
-                //_containerではなく、_containerの1つ下のレイヤーをスクロールさせる
+
+                //(riversun)Scroll the child layer of _container instead of _container itself.
                 var _c = document.querySelector(".botui-container");
                 _c.scrollTop = _c.scrollHeight;
                 //_container.scrollTop = _container.scrollHeight;
@@ -252,16 +252,14 @@
             _msg.type = _msg.type || 'text';
             _msg.visible = (_msg.delay || _msg.loading) ? false : true;
 
-            //riversun added(begin)
             if (_msg.human && _interface.opt.humanPhoto) {
                 _msg.humanPhoto = _interface.opt.humanPhoto;
             }
             if (!_msg.human && _interface.opt.botPhoto) {
                 _msg.botPhoto = _interface.opt.botPhoto;
             }
-            //riversun added(end)
 
-            //riversun added
+            //(riversun)
             _msg.afterUpdate = false;
 
             var _index = _instance.messages.push(_msg) - 1;

@@ -11,7 +11,7 @@ var fs = require('fs'),
     minify = require('gulp-clean-css');
 
 function escape(text) {
-    return text.replace(/'/g, "\\'").replace(/"/g, "\\\"");
+    return text.replace(/'/g, '\\\'').replace(/"/g, '\\"');
 }
 
 function htmlTemplate() {
@@ -40,7 +40,8 @@ gulp.task('styles', function () {
             pkg: pkg,
             year: new Date().getFullYear()
         }))
-        .pipe(gulp.dest('./public/lib/'));
+        // .pipe(gulp.dest('./public/lib/'));
+        .pipe(gulp.dest('./build/'));
 
 
 });
@@ -52,7 +53,8 @@ gulp.task('themes', function () {
         .pipe(rename(function (path) {
             path.basename = 'botui-theme-' + path.basename;
         }))
-        .pipe(gulp.dest('./public/lib/'));
+        //.pipe(gulp.dest('./public/lib/'));
+        .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('scripts', function () {
@@ -62,8 +64,9 @@ gulp.task('scripts', function () {
             pkg: pkg,
             year: new Date().getFullYear()
         }))
-        .pipe(gulp.dest('./public/lib/'));
-
+        //.pipe(gulp.dest('./public/lib/'));
+        .pipe(gulp.dest('./build/'));
+    
     gulp.src('./src/scripts/botui.js')  // minified version
         .pipe(uglify())
         .pipe(htmlTemplate())
@@ -72,7 +75,8 @@ gulp.task('scripts', function () {
             pkg: pkg,
             year: new Date().getFullYear()
         }))
-        .pipe(gulp.dest('./public/lib/'));
+        //.pipe(gulp.dest('./public/lib/'));
+        .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('watch', function () {
