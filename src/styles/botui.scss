@@ -7,14 +7,10 @@
 
 .botui-app-container {
   width:  100%;
-  height: 100vh;//縦方向も埋まるようにしてスマホの縦スクロールも問題ないようにする
+  height: 100%;
   margin: 0 auto;
 
-  //@media (min-width: 400px) {
-  //  width:  100%;
-  //  height: 100vh;//縦方向も埋まるようにしてスマホの縦スクロールも問題ないようにする
-  //  margin: 0 auto;
-  //}
+
 }
 
 .botui-container {
