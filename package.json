@@ -1,16 +1,19 @@
 {
-  "name": "botui",
+  "name": "@ayan4m1/botui",
   "description": "A JS library to build the UI for your bot",
   "homepage": "https://botui.org",
   "version": "0.3.7",
   "main": "build/botui.min.js",
+  "files": [
+    "build/"
+  ],
   "author": {
     "name": "Moin Uddin",
     "url": "https://moin.im"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moinism/botui.git"
+    "url": "git+https://github.com/ayan4m1/botui.git"
   },
   "bugs": {
     "url": "https://github.com/moinism/botui/issues"
@@ -24,26 +27,28 @@
     "ui"
   ],
   "dependencies": {
-    "opencollective-postinstall": "^2.0.1",
-    "opencollective": "^1.0.3"
+    "opencollective": "^1.0.3",
+    "opencollective-postinstall": "^2.0.3"
   },
   "devDependencies": {
-    "bumped": "^0.10.11",
-    "gulp": "^3.9.1",
+    "bumped": "^0.14.2",
+    "gulp": "^5.0.0",
     "gulp-banner": "^0.1.3",
-    "gulp-clean-css": "^3.5.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-replace": "^0.6.1",
-    "gulp-sass": "^4.0.1",
-    "gulp-uglify": "^2.0.0",
-    "htmlclean": "^3.0.2"
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "htmlclean": "^3.0.8",
+    "sass": "^1.81.0"
   },
   "scripts": {
     "release": "bumped release",
     "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "gulp watch",
+    "prepare": "gulp",
     "postinstall": "opencollective-postinstall"
   },
   "license": "MIT",
