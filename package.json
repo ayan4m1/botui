@@ -5,7 +5,8 @@
   "version": "0.3.7",
   "main": "build/botui.min.js",
   "files": [
-    "build/"
+    "build/",
+    "typings/"
   ],
   "author": {
     "name": "Moin Uddin",
@@ -16,7 +17,7 @@
     "url": "git+https://github.com/ayan4m1/botui.git"
   },
   "bugs": {
-    "url": "https://github.com/moinism/botui/issues"
+    "url": "https://github.com/ayan4m1/botui/issues"
   },
   "keywords": [
     "bot",
@@ -26,10 +27,6 @@
     "js",
     "ui"
   ],
-  "dependencies": {
-    "opencollective": "^1.0.3",
-    "opencollective-postinstall": "^2.0.3"
-  },
   "devDependencies": {
     "bumped": "^0.14.2",
     "gulp": "^5.0.0",
@@ -48,13 +45,8 @@
     "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "gulp watch",
-    "prepare": "gulp",
-    "postinstall": "opencollective-postinstall"
+    "prepare": "gulp"
   },
   "license": "MIT",
-  "types": "typings/index.d.ts",
-  "collective": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/botui"
-  }
+  "types": "typings/index.d.ts"
 }
